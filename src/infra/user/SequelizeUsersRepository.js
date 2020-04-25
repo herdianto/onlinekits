@@ -11,6 +11,12 @@ class SequelizeUsersRepository {
     return users.map(UserMapper.toEntity);
   }
 
+  // async getAll(...args) {
+  //   const {sequelize} = require('src/infra/database/models');
+  //   const users = await sequelize.query("SELECT * FROM `users`", { type: QueryTypes.SELECT });
+  //   return users.map(UserMapper.toEntity);
+  // }
+
   async getById(id) {
     const user = await this._getById(id);
 

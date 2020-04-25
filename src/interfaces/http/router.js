@@ -39,6 +39,7 @@ module.exports = ({ config, containerMiddleware, loggerMiddleware, errorHandler,
    */
 
   apiRouter.use('/users', controller('user/UsersController'));
+  apiRouter.use('/awb', controller('airwaybill/AirWayBillController'));
 
   router.use('/api', apiRouter);
 
